@@ -17,7 +17,7 @@ socket.addEventListener("close", () => console.log("Disconnected from Server"));
 const handleSubmit = (e) => {
   e.preventDefault();
   const input = messageForm.querySelector("input");
-  socket.send(makeMessage("message", input.value));
+  socket.send(makeMessage("new_message", input.value));
   input.value = "";
 }
 messageForm.addEventListener("submit", handleSubmit);
